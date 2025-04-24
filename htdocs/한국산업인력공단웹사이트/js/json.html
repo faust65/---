@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            *{box-sizing: border-box;}
+
+            #viewpost{
+                width: 500px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                border: 2px solid #888;
+                background: #fff;
+                padding: 15px;
+                display: none;
+            }
+
+            #viewpost a{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                background: #000;
+                color: #fff;
+                text-decoration: none;
+                height: 20px;
+                width: 20px;
+                text-align: center;
+                line-height: 15px;
+                border-radius: 50%;
+            }
+        </style>
+</head>
+
+<body>
+    <h1>posts</h1>
+    <table id="posts" class="table">
+        <thead>
+            <tr class="table-dark">
+                <td>Id</td>
+                <td>title</td>
+                <td>userId</td>
+            </tr>
+            <tbody></tbody>
+        </thead>
+    </table>
+    <div id="viewpost">
+        <h3 id="title">타이틀</h3>
+        <p id="body">본문</p>
+        <p id="username">사용자이름</p>
+        <p id="email">email</p>
+        <p id="company">회사이름</p>
+        <p id="phone">전화번호</p>
+        <a href="#" id="close">X</a>
+    </div>
+    <script>
+        const posturl='https://jsonplaceholder.typicode.com/posts'
+        fetch(posturl)
+            .then(response=>response.json())
+            .then(json=>showPosts(json))
+        const tbody=document.querySelector('#posts tbody')
+
+        const showPosts=(json)=>{
+            json.forEach(j=>{
+                let js=JSON.stringify(j)
+                const tr=`
+                <tr>
+                    <td>${j.id}</td>
+                    <td class=text-start>
+                        <a href='#' onclick='viewpost(event, ${js})'>${j.title}</a>
+                    </td>
+                    <td>${j.userId}</td>
+                </tr>
+                `
+                tbody.innerHTML+=tr
+            })
+
+            const viewPost=(e,id)=>{
+                e.preventDefault()
+                const userId=data.userId
+                const userurl='https://jsonplaceholder.typicode.com/users/' +userId
+                fetch(userurl)
+                    .then(res=>res.json())
+                    .then(user=>{
+                        data.user=user
+                        showData(data)
+                    })
+            }
+
+            const showData=(post)=>{
+                consol.log(post)
+                document.querySelector('#title').innerHTML=post.title
+                document.querySelector('#body').innerHTML=post.body
+                document.querySelector('#title').innerHTML=post.user.username
+                document.querySelector('#email').innerHTML=post.user.email
+                document.querySelector('#company').innerHTML=post.user.company.name
+                document.querySelector('#phone').innerHTML=post.user.phone
+                document.querySelector('#viewpost').style.display='block'
+            }
+        }
+    </script>
+</body>
+
+</html>

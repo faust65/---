@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>SAFE™</title>
+    <style>
+        a,
+        a:hover {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .dropdown-menu {
+            color: #fff;
+            background: #000;
+        }
+
+        .dropdown-menu>a {
+            color: #fff;
+        }
+
+        .fs{
+            font-size: 13px;
+            margin-right: 20px;
+        }
+
+        .fwt{
+            color: #fff;
+        }
+
+        .fw{
+            font-weight: 700;
+        }
+
+        .fw{
+            font-weight: 700;
+        }
+
+        #bt {
+            background: #000;
+            color: #fff;
+            font-weight: 900;
+            border-radius: 25px;
+            height: 40px;
+            width: 100px;
+            border: none;
+            font-size: 12px;
+        }
+
+        #btw{
+            background: #fff;
+            font-weight: 900;
+            border-radius: 25px;
+            height: 40px;
+            width: 100px;
+            border: none;
+            font-size: 12px;
+        }
+
+        #btw:hover {
+            background: #dfdede;
+        }
+
+        .wm{
+            width: 500px;
+            margin: 0 auto; 
+        }
+
+        .btc {
+            background: #fff;
+            font-weight: 900;
+            border-radius: 25px;
+            height: 30px;
+            width: 80px;
+            border: 1px solid #ddd;
+            font-size: 10px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .btc:hover {
+            background: #f1f1f1;
+        }
+
+        .form-control {
+            margin-top: 25px;
+            background: #f5f5f5;
+            border-radius: 40px;
+            border: none;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin: 0 auto;
+        }
+
+        .rad{
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/global-samsung-logo.svg" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">제품</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item disabled" href="#">DRAM</a>
+                                    <a class="dropdown-item disabled" href="#">SSD</a>
+                                    <a class="dropdown-item disabled" href="#">eStorage</a>
+                                    <a class="dropdown-item disabled" href="#">오토모티브 메모리</a>
+                                    <a class="dropdown-item" href="consumerstorage.html">Consumer Storage</a>
+                                    <a class="dropdown-item disabled" href="#">프로세서</a>
+                                    <a class="dropdown-item disabled" href="#">이미지센서</a>
+                                    <a class="dropdown-item disabled" href="#">디스플레이 IC</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">파운드리</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item disabled" href="#">삼성 파운드리 소개</a>
+                                    <a class="dropdown-item disabled" href="#">공정 기술</a>
+                                    <a class="dropdown-item disabled" href="#">Advanced Package</a>
+                                    <a class="dropdown-item" href="safetm.html">SAFE™</a>
+                                    <a class="dropdown-item disabled" href="#">Foundry Events</a>
+                                    <a class="dropdown-item disabled" href="#">제조</a>
+                                    <a class="dropdown-item disabled" href="#">응용 서비스</a>
+                                    <a class="dropdown-item disabled" href="#">테크 아카이브</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">솔루션</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item disabled" href="#">AI</a>
+                                    <a class="dropdown-item disabled" href="#">서버</a>
+                                    <a class="dropdown-item" href="automotive.html">오토모티브</a>
+                                    <a class="dropdown-item disabled" href="#">5G</a>
+                                    <a class="dropdown-item disabled" href="#">모바일</a>
+                                    <a class="dropdown-item disabled" href="#">PC & 게이밍</a>
+                                    <a class="dropdown-item disabled" href="#">디스플레이</a>
+                                    <a class="dropdown-item disabled" href="#">PIM</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">뉴스&이벤트</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">뉴스</a>
+                                    <a class="dropdown-item" href="#">이벤트</a>
+                                    <a class="dropdown-item" href="#">테크 블로그</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav my-2 my-lg-10">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">지속가능경영</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">주요 성과</a>
+                                    <a class="dropdown-item" href="#">환경</a>
+                                    <a class="dropdown-item" href="#">노동과 인권</a>
+                                    <a class="dropdown-item" href="#">사회공헌</a>
+                                    <a class="dropdown-item" href="#">지속가능한 공급망</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">고객지원</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">제품 찾기</a>
+                                    <a class="dropdown-item" href="#">기술 자료</a>
+                                    <a class="dropdown-item" href="#">Consumer Storage 지원</a>
+                                    <a class="dropdown-item" href="#">반도체 제조공정</a>
+                                    <a class="dropdown-item" href="#">용어 사전</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">회사소개</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">사업영역</a>
+                                    <a class="dropdown-item" href="#">경영진</a>
+                                    <a class="dropdown-item" href="#">위치</a>
+                                    <a class="dropdown-item" href="#">연혁</a>
+                                    <a class="dropdown-item" href="#">채용</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">한국</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Global/English</a>
+                                    <a class="dropdown-item" href="#">US/English</a>
+                                    <a class="dropdown-item" href="#">EMEA/English</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-toggle="dropdown" aria-expanded="false">R&D Center</a>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <hr style="padding: 0; margin: 0;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="navbar-brand" href="#">
+                        <p style="margin-left: 20px; font-size: 16px; padding-top: 7px;">SAFE™</p>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown"></li>
+                            <li class="nav-item dropdown"></li>
+                            <li class="nav-item dropdown"></li>
+                            <li class="nav-item dropdown"></li>
+                        </ul>
+                        <ul class="navbar-nav my-2 my-lg-10">
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">개요</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">IP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">EDA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">클라우드</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">디자인 서비스</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col px-0">
+                <div class="card bg-dark text-white">
+                    <img src="img/kv_pc.png" class="card-img img-fluid" alt="..." style="height: 600px;">
+                    <div class="card-img-overlay" style="text-align: center; color: #fff; margin-top: 150px;">
+                      <h1 class="card-title fw" style="font-size: 60px;">SAFE (Samsung Advanced Foundry Ecosystem)</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div style="margin-top: 150px; text-align: center;">
+            <h1 class="fw" style="margin-bottom: 30px;">생태계 협력</h1>
+            <b>SAFE™ (Samsung Advanced Foundry Ecosystem) 프로그램을 통해 삼성 파운드리는 생태계 파트너, 고객과 긴밀한 협력 관계를 형성하여 공정 설계 키트(PDK), 설계 방법론(DM)을 따르는레퍼런스 플로우,설계자산(IP)과 설계 지원을 포함한 인증된 핵심 설계 구성 요소를 기반으로 경쟁력 있고강력한 단일 칩 체제(SoC) 설계를 제공합니다.</b>
+        </div>
+        <div class="row">
+            <img src="img/feature_1_pc.svg" alt="" class="img-fluid" style="margin: 0 auto;">
+        </div>
+    </div>
+    <div class="container-fluid" style="background: #000; padding-bottom: 100px;">
+        <div class="container" style="background: #000;">
+            <div style="padding-top: 150px; padding-bottom: 100px;">
+                <h2 class="fw fwt" style="text-align: center;">SAFE™ 프로그램</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 mll">
+                    <h1 class="fw fwt wm" style="margin-bottom: 30px;">IP</h1>
+                    <p class="fwt fw wm">SAFE™ IP 파트너 프로그램은
+                        SAFE™ (Samsung Advanced Foundry Ecosystem)의 가장 핵심이 되는 부분으로
+                        삼성 파운드리와 설계자산(IP) 파트너 간의 협력을 강화하여
+                        고객의 요구 사항에 따른 여러 분야의 폭넓은 IP 포트폴리오를 제공하는 것을 목표로 합니다.
+                    </p>
+                    <div class="wm">
+                        <button id="btw" style="margin-top: 30px;"><b>더 알아보기</b></button>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img src="img/feature_2-1_pc.png" alt="" class="img-fluid" style="margin: 0 auto;">
+                </div>
+                <div class="col-sm-6 mll">
+                    <img src="img/feature_2-2_pc.png" alt="" class="img-fluid" style="margin: 0 auto;">
+                </div>
+                <div class="col-sm-6">
+                    <h1 class="fw fwt wm" style="margin-bottom: 30px; margin-top: 100px;">EDA</h1>
+                    <p class="fwt fw wm">삼성 파운드리는 기본적인 RTL-GDS 변환 설계 방법 문서와 스크립트(‘파운드리 DM’)를 제공하여 고객이 삼성 파운드리 공정을 이용해 정밀한 제품을 설계할 수 있도록 지원합니다.</p>
+                    <div class="wm">
+                        <button id="btw" style="margin-top: 30px;"><b>더 알아보기</b></button>
+                    </div>
+                </div>
+                <div class="col-sm-6 mll">
+                    <h1 class="fw fwt wm" style="margin-bottom: 30px; margin-top: 100px;">클라우드</h1>
+                    <p class="fwt fw wm">SAFE™ 클라우드는 클라우드에서 디자인 환경을 만드는 데
+                        가장 유연하고 효율적인 방법입니다. SAFE™ 클라우드는 주요 클라우드 서비스 제공업체와 EDA 기업과의 긴밀한 협력을 통해 제공됩니다.</p>
+                    <div class="wm">
+                        <button id="btw" style="margin-top: 30px;"><b>더 알아보기</b></button>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img src="img/feature_2-3_pc.png" class="img-fluid">
+                </div>
+                <div class="col-sm-6 mll">
+                    <img src="img/feature_2-4_pc.png" class="img-fluid">
+                </div>
+                <div class="col-sm-6">
+                    <h1 class="fw fwt wm" style="margin-bottom: 30px; margin-top: 100px;">설계</h1>
+                    <p class="fwt fw wm">디자인 솔루션 파트너의 멤버로는삼성 파운드리의 공정 기술을 비롯해 ASIC,파운드리, OSAT 운영 솔루션을 제공하는ASIC 협력업체와 서비스 제공업체가 있습니다.</p>
+                    <div class="wm">
+                        <button id="btw" style="margin-top: 30px;"><b>더 알아보기</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-12">
+            <h3 class="fw" style="text-align: center; margin-top: 100px; margin-bottom: 30px;">관련 컨텐츠</h3>
+            <div class="form-group" style="width: 500px;">
+                <input type="text" class="form-control" placeholder="검색">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-sm">
+                <a>
+                    <img src="img/thumbnail_search_4x3_why.png" alt="" class="img-fluid rad">
+                </a>
+                <div style="margin-top: 20px; margin-left: 20px;">
+                    <p style="font-size: 9px; margin-bottom: 10px;">테크 블로그</p>
+                    <a class="fw" href="#">삼성전자 반도체가 SAFE™ 포럼 2023에서 제시한 파운드리 생태계의 미래는? 긴밀한 협력을 토대로 한 혁신의 가속화!</a>
+                </div>
+                <button class="btc" style="margin-left: 20px; margin-top: 20px;">삼성 파운드리</button>
+                <button class="btc">SAFE</button>
+            </div>
+            <div class="col-sm">
+                <a>
+                    <img src="img/samsung-begins-chip-production-using-3nm-process-technology-with-gaa-architecture_thumb-1.png" alt="" class="img-fluid rad">
+                </a>
+                <div style="margin-top: 20px; margin-left: 20px;">
+                    <p style="font-size: 9px; margin-bottom: 10px;">뉴스</p>
+                    <a class="fw" href="#">삼성전자, 세계 최초 3나노 파운드리 양산</a>
+                </div>
+                <button class="btc" style="margin-left: 20px; margin-top: 20px;">GAA</button>
+                <button class="btc">FinFET</button>
+                <button class="btc">파운드리</button>
+                <button class="btc" style="margin-left: 20px; margin-top: 10px;">기술</button>
+                <button class="btc">반도체</button>
+                <button class="btc">3나노</button>
+            </div>
+            <div class="col-sm">
+                <a>
+                    <img src="img/samsung-foundry-unveiled-the-vision-of-its-ip-ecosystem-at-d-r-ip-soc-silicon-valley-22_thumb.png" alt="" class="img-fluid rad">
+                </a>
+                <div style="margin-top: 20px; margin-left: 20px;">
+                    <p style="font-size: 9px; margin-bottom: 10px;">뉴스</p>
+                    <a class="fw" href="#">[영상] 삼성 파운드리, D&R IP SoC 실리콘밸리 22에서 IP 생태계 비전 공개</a>
+                </div>
+                <button class="btc" style="margin-left: 20px; margin-top: 20px;">IP</button>
+                <button class="btc">SAFE</button>
+                <button class="btc">파운드리</button>
+                <button class="btc" style="margin-left: 20px; margin-top: 10px;">Ecosystem</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 100px; ">
+            <button id="bt" style="width: 70px; margin: 0 auto;">더보기</button>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 150px;">
+        <hr>
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col">제품</th>
+                    <th scope="col">파운드리</th>
+                    <th scope="col">솔루션</th>
+                    <th scope="col">지속가능경영</th>
+                    <th scope="col">고객지원</th>
+                    <th scope="col">회사소개</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">DRAM</a></td>
+                    <td><a href='#'>삼성 파운드리 소개</a></td>
+                    <td><a href='#'>AI</a></td>
+                    <td><a href='#'>주요 성과</a></td>
+                    <td><a href='#'>개요</a></td>
+                    <td><a href='#'>사업영역</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>SSD</a></td>
+                    <td><a href='#'>공정 기술</a></td>
+                    <td><a href='#'>서버</a></td>
+                    <td><a href='#'>환경</a></td>
+                    <td><a href='#'>제품 찾기</a></td>
+                    <td><a href='#'>경영진</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>eStorage</a></td>
+                    <td><a href='#'>Advanced Pakage</a></td>
+                    <td><a href='#'>오토모티브</a></td>
+                    <td><a href='#'>노동과 인권</a></td>
+                    <td><a href='#'>기술 자료</a></td>
+                    <td><a href='#'>위치</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>오토모티브 메모리</a></td>
+                    <td><a href='#'>SAFE<sup>TM</sup></a></td>
+                    <td><a href='#'>5G</a></td>
+                    <td><a href='#'>사회공헌</a></td>
+                    <td><a href='#'>Consumer Storage 지원</a></td>
+                    <td><a href='#'>연혁</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>Consumer Storage</a></td>
+                    <td><a href='#'>Foundry Events</a></td>
+                    <td><a href='#'>모바일</a></td>
+                    <td><a href='#'>지속가능한 공급망</a></td>
+                    <td><a href='#'>반도체 제조공정</a></td>
+                    <td><a href='#'>채용</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>프로세서</a></td>
+                    <td><a href='#'>제조</a></td>
+                    <td><a href='#'>PC&게이밍</a></td>
+                    <td></td>
+                    <td><a href='#'>용어 사전</a></td>
+                    <td><a href='#'>뉴스</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>이미지센서</a></td>
+                    <td><a href='#'>응용 서비스</a></td>
+                    <td><a href='#'>디스플레이</a></td>
+                    <td><b>윤리&준법경영</b></td>
+                    <td><a href='#'>글로벌 네트워크</a></td>
+                    <td><a href='#'>이벤트</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>디스플레이 IC</a></td>
+                    <td><a href='#'>테크 아카이브</a></td>
+                    <td><a href='#'>PIM</a></td>
+                    <td><a href='#'>경영원칙</a></td>
+                    <td><a href='#'>B2B Workplace</a></td>
+                    <td><a href='#'>테크블로그</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>보안솔루션</a></td>
+                    <td><a href='#'>US Fab</a></td>
+                    <td><a href='#'>EUV</a></td>
+                    <td><a href='#'>부정제보</a></td>
+                    <td></td>
+                    <td><a href='#'>투자자 정보</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>전력관리 IC</a></td>
+                    <td></td>
+                    <td><a href='#'>픽셀 테크놀로지</a></td>
+                    <td><a href='#'>법위반제보</a></td>
+                    <td></td>
+                    <td><a href='#'>윤리</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class="container">
+        <p style="font-size: 12px; color: #aaa; text-align: center;">Copyright© 2023 Samsung. All rights reserved</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

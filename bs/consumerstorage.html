@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer Storage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+        
+        /* body{
+            font-family: 'Gugi';
+        } */
+
+        a,
+        a:hover {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .dropdown-menu {
+            color: #fff;
+            background: #000;
+        }
+
+        .dropdown-menu>a {
+            color: #fff;
+        }
+
+        .fs{
+            font-size: 13px;
+            margin-right: 20px;
+        }
+
+        .fw{
+            font-weight: 700;
+        }
+
+        #bt {
+            background: #000;
+            color: #fff;
+            font-weight: 900;
+            border-radius: 25px;
+            height: 40px;
+            width: 100px;
+            border: none;
+            font-size: 12px;
+        }
+        
+        .mtt{
+            margin-top: 35px;
+        }
+
+        #gray{
+            background: #f8f8f8;
+            border-radius: 15px;
+            margin: 2px 12px 2px 12px;
+            padding-bottom: 25px;
+        }
+
+        .mt{
+            margin-top: 40px;
+        }
+
+        #btw{
+            background: #fff;
+            font-weight: 900;
+            border-radius: 25px;
+            height: 40px;
+            width: 100px;
+            border: none;
+            font-size: 12px;
+        }
+
+        #btw:hover {
+            background: #dfdede;
+        }
+
+        .ba ::before{
+            content: '|';
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+/* 
+        .ba ::after{
+            content: ' | ';
+        } */
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/global-samsung-logo.svg" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">제품</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item disabled" href="#">DRAM</a>
+                                    <a class="dropdown-item disabled" href="#">SSD</a>
+                                    <a class="dropdown-item disabled" href="#">eStorage</a>
+                                    <a class="dropdown-item disabled" href="#">오토모티브 메모리</a>
+                                    <a class="dropdown-item" href="consumerstorage.html">Consumer Storage</a>
+                                    <a class="dropdown-item disabled" href="#">프로세서</a>
+                                    <a class="dropdown-item disabled" href="#">이미지센서</a>
+                                    <a class="dropdown-item disabled" href="#">디스플레이 IC</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">파운드리</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item disabled" href="#">삼성 파운드리 소개</a>
+                                    <a class="dropdown-item disabled" href="#">공정 기술</a>
+                                    <a class="dropdown-item disabled" href="#">Advanced Package</a>
+                                    <a class="dropdown-item" href="safetm.html">SAFE™</a>
+                                    <a class="dropdown-item disabled" href="#">Foundry Events</a>
+                                    <a class="dropdown-item disabled" href="#">제조</a>
+                                    <a class="dropdown-item disabled" href="#">응용 서비스</a>
+                                    <a class="dropdown-item disabled" href="#">테크 아카이브</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">솔루션</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item disabled" href="#">AI</a>
+                                    <a class="dropdown-item disabled" href="#">서버</a>
+                                    <a class="dropdown-item" href="automotive.html">오토모티브</a>
+                                    <a class="dropdown-item disabled" href="#">5G</a>
+                                    <a class="dropdown-item disabled" href="#">모바일</a>
+                                    <a class="dropdown-item disabled" href="#">PC & 게이밍</a>
+                                    <a class="dropdown-item disabled" href="#">디스플레이</a>
+                                    <a class="dropdown-item disabled" href="#">PIM</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">뉴스&이벤트</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">뉴스</a>
+                                    <a class="dropdown-item" href="#">이벤트</a>
+                                    <a class="dropdown-item" href="#">테크 블로그</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav my-2 my-lg-10">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">지속가능경영</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">주요 성과</a>
+                                    <a class="dropdown-item" href="#">환경</a>
+                                    <a class="dropdown-item" href="#">노동과 인권</a>
+                                    <a class="dropdown-item" href="#">사회공헌</a>
+                                    <a class="dropdown-item" href="#">지속가능한 공급망</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">고객지원</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">제품 찾기</a>
+                                    <a class="dropdown-item" href="#">기술 자료</a>
+                                    <a class="dropdown-item" href="#">Consumer Storage 지원</a>
+                                    <a class="dropdown-item" href="#">반도체 제조공정</a>
+                                    <a class="dropdown-item" href="#">용어 사전</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">회사소개</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">사업영역</a>
+                                    <a class="dropdown-item" href="#">경영진</a>
+                                    <a class="dropdown-item" href="#">위치</a>
+                                    <a class="dropdown-item" href="#">연혁</a>
+                                    <a class="dropdown-item" href="#">채용</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">한국</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Global/English</a>
+                                    <a class="dropdown-item" href="#">US/English</a>
+                                    <a class="dropdown-item" href="#">EMEA/English</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-toggle="dropdown" aria-expanded="false">R&D Center</a>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <hr style="padding: 0; margin: 0;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="navbar-brand" href="#">
+                        <p style="margin-left: 20px; font-size: 16px; padding-top: 7px;">Consumer Storage</p>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown"></li>
+                            <li class="nav-item dropdown"></li>
+                            <li class="nav-item dropdown"></li>
+                            <li class="nav-item dropdown"></li>
+                        </ul>
+                        <ul class="navbar-nav my-2 my-lg-10">
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">개요</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">내장SSD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">포터블SSD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">메모리 카드</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">USB Flash Drive</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">Gaming Storage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">Magician 소프트웨어</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">고객지원</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col px-0">
+                <div class="card bg-dark text-white">
+                    <img src="img/th-posterimg-01-pc_2x.png" class="card-img" alt="..." style="height: 600px;">
+                    <div class="card-img-overlay" style="margin-right: 200px; margin-top: 200px; text-align: right; color: #fff;">
+                      <h1 class="card-title fw">앞선 메모리 기술이 담긴 삼성 SSD</h1>
+                      <b class="card-text fw">삼성 메모리는 세상의 혁신을 주도하고 있습니다. 바로 그 메모리 기술이 삼성 SSD 제품에 동일하게 담겨 있습니다.</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 150px;">
+            <div class="col-sm-6">
+                <h1 class="fw">혁신을 일상으로</h1>
+                <p style="font-size: 15px; margin-top: 30px; text-align: center;">AI, 자율주행 자동차, 메타버스, 데이터 센터 등 세상의 가장 혁신적인 기술 뒤에는 삼성 메모리가 있습니다. 이러한 혁신은 우리가 과거에 불가능하다고 믿었던 일들을 현실로 만들고 있죠. 삼성 SSD를 통해 여러분도 바로 그 메모리 기술을 활용할 수 있습니다.삼성 SSD 와 함께 어떤 새로운 도전을 시도해보시겠습니까?                </p>
+                <img src="img/Memory_PCD-intro-01-pc@2x-new.avif" alt="" class="img-fluid" style="margin-top: 50px;">
+            </div>
+            <div class="col-sm-6">
+                <img src="img/Memory_PCD-intro-02-pc.avif" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div style="margin-top: 150px;">
+            <h1 class="fw" style="text-align: center;">강력한 성능의 스토리지</h1>
+            <p style="text-align: center; margin-top: 25px;">혁신은 삼성 스토리지와 함께 시작됩니다</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 50px; text-align: center;">
+            <div class="col-sm-6">
+                <img src="img/Memory_PCD-internal-ssd-pc@2x.avif" alt="" class="img-fluid">
+                <h3 class="fw mtt">내장 SSD</h3>
+                <p style="margin-top: 10px;">간단한 업그레이드, 놀라운 속도</p>
+                <button id="bt" style="margin-top: 15px; margin-left: 15px;"><b>더 알아보기</b></button>
+            </div>
+            <div class="col-sm-6">
+                <img src="img/Memory_PCD-portable-ssd-pc@2x.avif" alt="" class="img-fluid">
+                <h3 class="fw mtt">포터블 SSD</h3>
+                <p style="margin-top: 10px;">전송은 더 빠르게, 저장은 더 안정적으로</p>
+                <button id="bt" style="margin-top: 15px; margin-left: 15px;"><b>더 알아보기</b></button>
+            </div>
+            <div class="col-sm-6" style="margin-top: 50px;">
+                <img src="img/Memory_PCD-memory-card-pc@2x.png" alt="" class="img-fluid">
+                <h3 class="fw mtt">메모리 카드</h3>
+                <p style="margin-top: 10px;">일상 속 소중한 순간과 함께하는 메모리 카드</p>
+                <button id="bt" style="margin-top: 15px; margin-left: 15px;"><b>더 알아보기</b></button>
+            </div>
+            <div class="col-sm-6" style="margin-top: 50px;">
+                <img src="img/Memory_PCD-usb-flash-pc@2x.avif" alt="" class="img-fluid">
+                <h3 class="fw mtt">USB 플래시 드라이브</h3>
+                <p style="margin-top: 10px;">빠르고 간편한 USB 플래시 드라이브</p>
+                <button id="bt" style="margin-top: 15px; margin-left: 15px;"><b>더 알아보기</b></button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div style="margin-top: 150px;">
+            <h1 class="fw" style="text-align: center;">삼성 SSD가 특별한 이유는 무엇일까요?</h1>
+        </div>
+        <div class="row" style="margin-top: 60px; text-align: center;">
+            <div class="col-sm">
+                <img src="img/Memory_PCD-speacial-01-pc@2x.avif" alt="" class="img-fluid">
+                <h4 class="fw mtt">신뢰할 수 있는 품질</h4>
+                <p style="margin-top: 10px;">2023년부터 플래시 메모리 부문 세계 1위를 기록하고 있는 삼성 SSD의 뛰어난 성능과 안정성을 경험해 보세요.</p>
+            </div>
+            <div class="col-sm">
+                <img src="img/Memory_PCD-speacial-02-pc@2x.avif" alt="" class="img-fluid">
+                <h4 class="fw mtt">폭넓은 제품군</h4>
+                <p style="margin-top: 10px;">삼성전자는 내장 SSD, 포터블 SSD, 메모리 카드 및 USB 플래시 드라이브 등 빠른 전송 속도와 높은 신뢰성을 자랑하는 다양한 제품을 선보이고 있습니다.</p>
+            </div>
+            <div class="col-sm">
+                <img src="img/Memory_PCD-speacial-03-pc@2x.avif" alt="" class="img-fluid">
+                <h4 class="fw mtt">SSD 관리 소프트웨어</h4>
+                <p style="margin-top: 10px;">Samsung Magician 소프트웨어로 SSD 성능을 편리하게 향상시키고, 드라이브를 최신 상태로 유지 시킬 수 있습니다.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div style="margin-top: 150px;">
+            <h1 class="fw" style="text-align: center;">세계가 인정하는 삼성 SSD</h1>
+            <p style="text-align: center; margin-top: 25px; font-size: 15px;">수많은 크리에이티브 전문가, 게이머들이 사용하는 삼성전자의 SSD는 업계에서 가장 권위 있는 인물 및 기관의 인정을 받고 있습니다.</p>
+        </div>
+        <div class="row" style="margin-top: 60px; text-align: center;">
+            <div class="col-sm" id="gray">
+                <img src="img/Memory_PCD-word-for-01-pc@2x.avif" alt="" class="img-fluid">
+                <h4 class="mt" style="font-size: 20px;">CES®2023 Innovation Awards Honoree</h4>
+                <b style="margin-top: 10px; font-size: 12px;">990 PRO with Heatsink 2TB</b>
+            </div>
+            <div class="col-sm" id="gray">
+                <img src="img/Memory_PCD-word-for-02-pc@2x.avif" alt="" class="img-fluid">
+                <h4 class="mt" style="font-size: 20px;">Red Dot Design Award 2023</h4>
+                <b style="margin-top: 10px; font-size: 12px;">T7 Shield</b>
+            </div>
+            <div class="col-sm" id="gray">
+                <img src="img/Memory_PCD-word-for-03-pc@2x.avif" alt="" class="img-fluid">
+                <h4 class="mt" style="font-size: 20px;">tom's HARDWARE Editor's Choice</h4>
+                <b style="margin-top: 10px; font-size: 12px;">990 PRO</b>
+            </div>
+            <div class="col-sm" id="gray">
+                <img src="img/Memory_PCD-word-for-04-pc@2x.avif" alt="" class="img-fluid">
+                <h4 class="mt" style="font-size: 20px;">Laptop Ultimate Home Office Awards 2022</h4>
+                <b style="margin-top: 10px; font-size: 12px;">T7 Shield</b>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div style="margin-top: 150px; text-align: center;">
+            <h1 class="fw" style="text-align: center;margin-bottom: 30px;">나에게 맞는 SSD 를 찾아보세요</h1>
+            <a href="#"><b>크리에이터</b></a>
+            <a href="#" class="ba"><b>게이머</b></a>
+            <a href="#" class="ba"><b>얼리 어답터</b></a>
+            <a href="#" class="ba"><b>일반 사용자</b></a>
+        </div>
+        <div class="row" style="margin-top: 60px; text-align: center;">
+            <div class="col-sm" id="gray">
+                <img src="img/Memory_PCD-photographers-01-pc@2x.avif" alt="" class="img-fluid">
+                <h4 class="mt">포터블 SSD T9</h4>
+                <p style="margin-top: 10px;">프로 크리에이터를 위한 강력한 속도</p>
+                <button id="bt" style="margin-top: 15px; margin-left: 15px;"><b>더 알아보기</b></button>
+            </div>
+            <div class="col-sm" id="gray">
+                <img src="img/Memory_PCD-photographers-02-pc@2x.avif" alt="" class="img-fluid">
+                <h4 class="mt">NVMe™ SSD 990 PRO</h4>
+                <p style="margin-top: 10px;">압도적인 속도, 끝없는 승리</p>
+                <button id="bt" style="margin-top: 15px; margin-left: 15px;"><b>더 알아보기</b></button>
+            </div>
+            <div class="col-sm" id="gray">
+                <img src="img/Memory_PCD-photographers-03-new-pc@2x.avif" alt="" class="img-fluid">
+                <h4 class="mt">SD 카드 PRO Ultimate</h4>
+                <p style="margin-top: 10px;">전문가를 위한 최고의 퍼포먼스</p>
+                <button id="bt" style="margin-top: 15px; margin-left: 15px;"><b>더 알아보기</b></button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 150px;">
+            <div class="card text-white col-12" style="border: none; background: #fff; margin-bottom: 20px;">
+                <img src="img/matchmaker_banner_pc.avif" class="card-img" alt="...">
+                <div class="card-img-overlay" style="margin-left: 30px; margin-top: 15px;">
+                    <h2>Gaming storage</h2>
+                    <p style="margin-top: 15px;">최적의 게이밍 스토리지 제품을 찾아보세요</p>
+                    <button id="btw" style="margin-top: 20px; margin-left: 15px;"><b>더 알아보기</b></button>
+                </div>
+            </div>
+            <div class="card text-white col-12" style="border: none; background: #fff; margin-bottom: 20px;">
+                <img src="img/software_banner_pc.avif" class="card-img" alt="...">
+                <div class="card-img-overlay" style="margin-left: 30px; margin-top: 15px;">
+                    <h2>Magician Software 8.0</h2>
+                    <p style="margin-top: 15px;">It’s not magic. It’s software.</p>
+                    <button id="btw" style="margin-top: 20px; margin-left: 15px;"><b>더 알아보기</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 150px;">
+        <hr>
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col">제품</th>
+                    <th scope="col">파운드리</th>
+                    <th scope="col">솔루션</th>
+                    <th scope="col">지속가능경영</th>
+                    <th scope="col">고객지원</th>
+                    <th scope="col">회사소개</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">DRAM</a></td>
+                    <td><a href='#'>삼성 파운드리 소개</a></td>
+                    <td><a href='#'>AI</a></td>
+                    <td><a href='#'>주요 성과</a></td>
+                    <td><a href='#'>개요</a></td>
+                    <td><a href='#'>사업영역</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>SSD</a></td>
+                    <td><a href='#'>공정 기술</a></td>
+                    <td><a href='#'>서버</a></td>
+                    <td><a href='#'>환경</a></td>
+                    <td><a href='#'>제품 찾기</a></td>
+                    <td><a href='#'>경영진</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>eStorage</a></td>
+                    <td><a href='#'>Advanced Pakage</a></td>
+                    <td><a href='#'>오토모티브</a></td>
+                    <td><a href='#'>노동과 인권</a></td>
+                    <td><a href='#'>기술 자료</a></td>
+                    <td><a href='#'>위치</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>오토모티브 메모리</a></td>
+                    <td><a href='#'>SAFE<sup>TM</sup></a></td>
+                    <td><a href='#'>5G</a></td>
+                    <td><a href='#'>사회공헌</a></td>
+                    <td><a href='#'>Consumer Storage 지원</a></td>
+                    <td><a href='#'>연혁</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>Consumer Storage</a></td>
+                    <td><a href='#'>Foundry Events</a></td>
+                    <td><a href='#'>모바일</a></td>
+                    <td><a href='#'>지속가능한 공급망</a></td>
+                    <td><a href='#'>반도체 제조공정</a></td>
+                    <td><a href='#'>채용</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>프로세서</a></td>
+                    <td><a href='#'>제조</a></td>
+                    <td><a href='#'>PC&게이밍</a></td>
+                    <td></td>
+                    <td><a href='#'>용어 사전</a></td>
+                    <td><a href='#'>뉴스</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>이미지센서</a></td>
+                    <td><a href='#'>응용 서비스</a></td>
+                    <td><a href='#'>디스플레이</a></td>
+                    <td><b>윤리&준법경영</b></td>
+                    <td><a href='#'>글로벌 네트워크</a></td>
+                    <td><a href='#'>이벤트</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>디스플레이 IC</a></td>
+                    <td><a href='#'>테크 아카이브</a></td>
+                    <td><a href='#'>PIM</a></td>
+                    <td><a href='#'>경영원칙</a></td>
+                    <td><a href='#'>B2B Workplace</a></td>
+                    <td><a href='#'>테크블로그</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>보안솔루션</a></td>
+                    <td><a href='#'>US Fab</a></td>
+                    <td><a href='#'>EUV</a></td>
+                    <td><a href='#'>부정제보</a></td>
+                    <td></td>
+                    <td><a href='#'>투자자 정보</a></td>
+                </tr>
+                <tr>
+                    <td><a href='#'>전력관리 IC</a></td>
+                    <td></td>
+                    <td><a href='#'>픽셀 테크놀로지</a></td>
+                    <td><a href='#'>법위반제보</a></td>
+                    <td></td>
+                    <td><a href='#'>윤리</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <div class="container">
+        <p style="font-size: 12px; color: #aaa; text-align: center;">Copyright© 2023 Samsung. All rights reserved</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

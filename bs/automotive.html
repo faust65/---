@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>automotive</title>
+    <style>
+        a,
+        a:hover {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .dropdown-menu {
+            color: #fff;
+            background: #000;
+        }
+
+        .dropdown-menu>a {
+            color: #fff;
+        }
+
+        .fs{
+            font-size: 13px;
+            margin-right: 20px;
+        }
+
+        .fwt{
+            color: #fff;
+        }
+
+        .fw{
+            font-weight: 700;
+        }
+
+        .fw{
+            font-weight: 700;
+        }
+
+        #bt {
+            background: #000;
+            color: #fff;
+            font-weight: 900;
+            border-radius: 25px;
+            height: 40px;
+            width: 100px;
+            border: none;
+            font-size: 12px;
+        }
+
+        #btw{
+            background: #fff;
+            font-weight: 900;
+            border-radius: 25px;
+            height: 40px;
+            width: 100px;
+            border: none;
+            font-size: 12px;
+        }
+
+        #btw:hover {
+            background: #dfdede;
+        }
+
+        .wm{
+            width: 500px;
+            margin: 0 auto; 
+        }
+
+        .btc {
+            background: #fff;
+            font-weight: 900;
+            border-radius: 25px;
+            height: 30px;
+            width: 100px;
+            border: 1px solid #ddd;
+            font-size: 8px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .btc:hover {
+            background: #f1f1f1;
+        }
+
+        .form-control {
+            margin-top: 25px;
+            background: #f5f5f5;
+            border-radius: 40px;
+            border: none;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin: 0 auto;
+        }
+
+        .rad{
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/global-samsung-logo.svg" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">제품</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item disabled" href="#">DRAM</a>
+                                    <a class="dropdown-item disabled" href="#">SSD</a>
+                                    <a class="dropdown-item disabled" href="#">eStorage</a>
+                                    <a class="dropdown-item disabled" href="#">오토모티브 메모리</a>
+                                    <a class="dropdown-item" href="consumerstorage.html">Consumer Storage</a>
+                                    <a class="dropdown-item disabled" href="#">프로세서</a>
+                                    <a class="dropdown-item disabled" href="#">이미지센서</a>
+                                    <a class="dropdown-item disabled" href="#">디스플레이 IC</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">파운드리</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item disabled" href="#">삼성 파운드리 소개</a>
+                                    <a class="dropdown-item disabled" href="#">공정 기술</a>
+                                    <a class="dropdown-item disabled" href="#">Advanced Package</a>
+                                    <a class="dropdown-item" href="safetm.html">SAFE™</a>
+                                    <a class="dropdown-item disabled" href="#">Foundry Events</a>
+                                    <a class="dropdown-item disabled" href="#">제조</a>
+                                    <a class="dropdown-item disabled" href="#">응용 서비스</a>
+                                    <a class="dropdown-item disabled" href="#">테크 아카이브</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">솔루션</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item disabled" href="#">AI</a>
+                                    <a class="dropdown-item disabled" href="#">서버</a>
+                                    <a class="dropdown-item" href="automotive.html">오토모티브</a>
+                                    <a class="dropdown-item disabled" href="#">5G</a>
+                                    <a class="dropdown-item disabled" href="#">모바일</a>
+                                    <a class="dropdown-item disabled" href="#">PC & 게이밍</a>
+                                    <a class="dropdown-item disabled" href="#">디스플레이</a>
+                                    <a class="dropdown-item disabled" href="#">PIM</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">뉴스&이벤트</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">뉴스</a>
+                                    <a class="dropdown-item" href="#">이벤트</a>
+                                    <a class="dropdown-item" href="#">테크 블로그</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav my-2 my-lg-10">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">지속가능경영</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">주요 성과</a>
+                                    <a class="dropdown-item" href="#">환경</a>
+                                    <a class="dropdown-item" href="#">노동과 인권</a>
+                                    <a class="dropdown-item" href="#">사회공헌</a>
+                                    <a class="dropdown-item" href="#">지속가능한 공급망</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">고객지원</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">제품 찾기</a>
+                                    <a class="dropdown-item" href="#">기술 자료</a>
+                                    <a class="dropdown-item" href="#">Consumer Storage 지원</a>
+                                    <a class="dropdown-item" href="#">반도체 제조공정</a>
+                                    <a class="dropdown-item" href="#">용어 사전</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">회사소개</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">사업영역</a>
+                                    <a class="dropdown-item" href="#">경영진</a>
+                                    <a class="dropdown-item" href="#">위치</a>
+                                    <a class="dropdown-item" href="#">연혁</a>
+                                    <a class="dropdown-item" href="#">채용</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                    aria-expanded="false">한국</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Global/English</a>
+                                    <a class="dropdown-item" href="#">US/English</a>
+                                    <a class="dropdown-item" href="#">EMEA/English</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-toggle="dropdown" aria-expanded="false">R&D Center</a>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <hr style="padding: 0; margin: 0;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="navbar-brand" href="#">
+                        <p style="margin-left: 20px; font-size: 16px; padding-top: 7px;">오토모티브</p>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown"></li>
+                            <li class="nav-item dropdown"></li>
+                            <li class="nav-item dropdown"></li>
+                            <li class="nav-item dropdown"></li>
+                        </ul>
+                        <ul class="navbar-nav my-2 my-lg-10">
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">개요</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">관련 컨텐츠</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">트렌드</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fs" href="">제품</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col px-0">
+                <div class="card bg-dark text-white">
+                    <img src="img/automotive_kv_pc_05.avif" class="card-img img-fluid" alt="..." style="height: 600px;">
+                    <div class="card-img-overlay" style="text-align: center; color: #fff; margin-top: 150px;">
+                      <h1 class="card-title fw" style="font-size: 60px;">이동수단을 넘어, 플랫폼을 향해</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-12">
+            <h3 class="fw" style="text-align: center; margin-top: 100px; margin-bottom: 30px;">관련 컨텐츠</h3>
+            <div class="form-group" style="width: 500px;">
+                <input type="text" class="form-control" placeholder="검색">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-sm">
+                <a>
+                    <img src="img/th-web-part-automotive-search-4x3_2x.avif" alt="" class="img-fluid rad">
+                </a>
+                <div style="margin-top: 20px; margin-left: 20px;">
+                    <p style="font-size: 9px; margin-bottom: 10px;">테크 블로그</p>
+                    <a class="fw" href="#">[오토모티브] 다양한 차량용 솔루션으로 모빌리티의 미래 실현</a>
+                </div>
+                <button class="btc" style="margin-left: 20px; margin-top: 20px;">오토모티브</button>
+                <button class="btc">오토모티브 프로세서</button>
+                <button class="btc">오토모티브 메모리</button>
+                <button class="btc" style="margin-left: 20px; margin-top: 10px;">오토모티브 이미지센서</button>
+            </div>
+            <div class="col-sm">
+                <a>
+                    <img src="img/how-samsung-semiconductor-is-revolutionizing-the-road-ahead_4x3_2.avif" alt="" class="img-fluid rad">
+                </a>
+                <div style="margin-top: 20px; margin-left: 20px;">
+                    <p style="font-size: 9px; margin-bottom: 10px;">테크 블로그</p>
+                    <a class="fw" href="#">[오토모티브] 삼성 반도체가 미래 자동차 산업을 혁신하는 방법</a>
+                </div>
+                <button class="btc" style="margin-left: 20px; margin-top: 20px;">오토모티브</button>
+                <button class="btc">차량용 인포테인먼트</button>
+                <button class="btc">ADAS</button>
+                <button class="btc" style="margin-left: 20px; margin-top: 10px;">Automnomous Driving</button>
+            </div>
+            <div class="col-sm">
+                <a>
+                    <img src="img/samsung-starts-mass-production-of-automotive-ufs-3-1_search-4x3.avif" alt="" class="img-fluid rad">
+                </a>
+                <div style="margin-top: 20px; margin-left: 20px;">
+                    <p style="font-size: 9px; margin-bottom: 10px;">뉴스</p>
+                    <a class="fw" href="#">삼성전자, 초저전력 차량용 UFS 3.1 양산</a>
+                </div>
+                <button class="btc" style="margin-left: 20px; margin-top: 20px;">오토모티브</button>
+                <button class="btc">차량용 인포테인먼트</button>
+                <button class="btc">소비전력</button>
+                <button class="btc" style="margin-left: 20px; margin-top: 10px;">UFS 3.1</button>
+                <button class="btc">ASPICE</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="margin-top: 100px; ">
+            <button id="bt" style="width: 70px; margin: 0 auto;">더보기</button>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 150px;">
+        <div class="row">
+            <div class="col">
+                <h1 class="fw">오토모티브의 <br>미래로 가는 길</h1>
+            </div>
+            <div class="col">
+                <p>5G와 인공지능은 오토모티브 산업에 놀라운 변화를 가져오고 있습니다. 또한, ‘차량’의 정의는 단순히 엔진과 기계적 부품의 조합을 넘어 확장되고 있습니다. 이제, 인포테인먼트 시스템, 텔레매틱스를 비롯해 편안함과 즐거움을 주는 스마트 드라이빙 경험이 새로운 기준이 되고 있습니다. 삼성은 오토모티브를 위한 다양한 첨단 반도체 포트폴리오로 모빌리티의 미래를 위한 새로운 원동력이 될 것입니다.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="background: #000; padding-bottom: 100px; margin-top: 50px;">
+        <div class="container" style="background: #000;">
+            <div style="padding-top: 150px; padding-bottom: 100px;">
+                <h2 class="fw fwt" style="text-align: center;">트렌드</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 mll">
+                    <h1 class="fw fwt wm" style="margin-bottom: 30px;">자동차에서 플랫폼으로</h1>
+                    <p class="fwt fw wm">삼성 반도체는 몰입감 있는 인포테인먼트 시스템 구축을 가능하게 합니다. 최신 엑시노스 오토 프로세서는 6개에 이르는 디스플레이와 복수의 운영체제를 동시에 지원합니다. LPDDR5/X와 UFS 메모리 솔루션은 갑작스러운 온도 변화나 계속되는 주행 진동 등의 어려운 조건에서도 최적의 성능을 제공합니다
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <img src="img/automotive-trends01-pc.avif" alt="" class="img-fluid" style="margin: 0 auto;">
+                </div>
+                <div class="col-sm-6 mll">
+                    <img src="img/automotive-trends02-pc.avif" alt="" class="img-fluid" style="margin: 0 auto;">
+                </div>
+                <div class="col-sm-6">
+                    <h1 class="fw fwt wm" style="margin-bottom: 30px; margin-top: 100px;">자동차,<br>소통의 도구가 되다</h1>
+                    <p class="fwt fw wm">텔레매틱스를 기반으로 한 커넥티드 차량과 자율주행은 빠르게 현실이 되어가고 있습니다. 5G의 혁신적인 속도와 지연 시간 개선은 C-V2X를 실현해, 인포테인먼트는 물론 안전 운행을 위한 다양한 기능들을 가능하게 합니다.
+
+                        엑시노스 오토 프로세서는 네트워크 액세스 장치가 있는 텔레매틱스 제어 장치와 함께 사용되어, 5G를 통한 새로운 주행 경험을 제공할 것입니다.</p>
+                </div>
+                <div class="col-sm-6 mll">
+                    <h1 class="fw fwt wm" style="margin-bottom: 30px; margin-top: 100px;">새로운 운전의 시작</h1>
+                    <p class="fwt fw wm">SAFE™ 클라우드는 클라우드에서 디자인 환경을 만드는 데
+                        코너픽셀 기술이 적용된 아이소셀 오토 이미지센서는 어두운 곳에서도 사물을 식별하며, 120dB의 향상된 다이내믹 레인지는 갑작스러운 고대비 환경에서도 물체를 쉽게 감지합니다. 또한 코너픽셀로 자동차 후방등, 신호등, 광고판에 쓰이는 LED의 플리커 현상을 완화하여 안전한 운행을 지원 합니다</p>
+                </div>
+                <div class="col-sm-6">
+                    <img src="img/automotive-trends03-pc.avif" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div style="padding-top: 150px; padding-bottom: 100px; margin-top: 150px;">
+                <h2 class="fw fwt" style="text-align: center;">관련 제품</h2>
+            </div>
+            <h4 class="fw fwt" style="margin-top: 30px;">메모리</h4>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

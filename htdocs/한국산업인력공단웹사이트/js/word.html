@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        html,body{
+            margin: 0;
+            background: #000;
+            width: 100%;
+            height: 100%;
+        }
+
+        #wordbox{
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .typer{
+            width: 100%;
+            height: 50px;
+            padding: 5px 0;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+        }
+
+        input{
+            width: 50%;
+            height: 40px;
+            font-size: 1.5em;
+        }
+
+        .word{
+            color: #fff;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            font-size: 1.5em;
+        }
+
+        #scorebord{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            color: #ff0;
+            font-size: 2em;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="wordbox"></div>
+    <div id="scorebord">0</div>
+    <div class="typer">
+        <input type="text" id="wordinput">
+    </div>
+    <script>
+        const wordurl='https://random-word-api.herokuapp.com/word?number=1'
+        const wordbox=document.querySelector('#wordbox')
+        const wordinput=document.querySelector('#wordinput')
+        const getword=()=>{
+            return fetch(wordurl)
+                .then(res=>res.json())
+                .then(data=>data[0])
+        }
+        setInterval(async () => {
+            const word=await getword()
+            const randomlift=Math.random()*(wordbox.offsetWidth-100)
+            const wordspan=document.createElement('span')
+            wordspan.textContent=word
+            wordspan.classList.add('word')
+            wordspan.style.left=randomlift+'px'
+            wordbox.appendChild(wordspan)
+
+            const dropdown=setInterval(()=>{
+                wordspan.style.top=(wordspan.offsetTop+1) +'px'
+                if(wordspan.offsetTop>wordbox.offsetHeight){
+                    wordspan.remove()
+                    clearInterval(dropdown)
+                }
+            },4)
+        }, 1000)
+
+        window.onload=()=> wordinput.focus()
+        let score=0
+        wordinput.addEventListener("keyup", (e) =>{
+            if(e.key==="Enter"){
+                const typeword=wordinput.value.trim()
+                const words=document.querySelectorAll('.word')
+                words.forEach(w=>{
+                    if (w.textContent===typeword){
+                        score++
+                        document.querySelector('#scorebord').innerHTML=score
+                        w.remove()
+                    }
+                })
+                wordinput.value=''
+            }
+        })
+    </script>
+</body>
+</html>
